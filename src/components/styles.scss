@@ -1,0 +1,368 @@
+$gs_blue: #2E3A8C;
+$gs_blue-hover: #2E3A8CCC;
+$gs_green: #3B755F;
+$gs_green-hover: rgba(59, 117, 95, 0.8);
+$gs_bege: #F2EBDB;
+$gs_bege-hover: rgba(242, 235, 219, 0.8);
+$gs_white: #FFFFFF;
+$gs_white-hover: rgba(255, 255, 255, 0.8);
+$gs_dark: #212121;
+$gs_dark-hover: rgba(33, 33, 33, 0.8);
+$gs_light_green: #AFC6BD;
+
+$gs_font: 'Cabin';
+
+$gs__widget_width: 230px;
+$gs__widget_height: 100%;
+$gs__widget_radius: 5.95px;
+
+$gs__container_width: 39.7px;
+$gs__container_height: 45.41px;
+
+$gs__container__widget-text-color: #F9F9F9;
+$gs__container__text-color: #3B755F;
+
+.gs__container {
+    width: $gs__widget_width;
+    height: $gs__widget_height;
+    display: flex;
+    flex-direction: column;
+}
+
+.gs__widget {
+    margin-top: 24px;
+    border-radius: $gs__widget_radius;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    &-blue {
+        background: $gs_blue;
+    }
+
+    &-green {
+        background: $gs_green;
+    }
+
+    &-bege {
+        background: $gs_bege;
+    }
+
+    &-bege &__container {
+        color: $gs_green;
+    }
+
+    &-white {
+        background: $gs_white;
+    }
+
+    &-white &__container {
+        color: $gs_green;
+    }
+
+    &-dark {
+        background: $gs_dark;
+    }
+
+    &__container {
+        color: $gs__container__widget-text-color;
+        font-family: $gs_font;
+        width: 150px;
+
+        &__text {
+            font-weight: bold;
+            font-size: 17.8647px;
+            line-height: 22px;
+            margin: 3.96992px 0px;
+        }
+
+        &__text-title {
+            font-weight: normal;
+            margin: 3.96992px 0px;
+            font-size: 12.406px;
+            line-height: 15px;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+
+        &__container {
+            width: $gs__container_width;
+            height: $gs__container_height;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.gs__items {
+    margin: 5px 0px;
+    font-family: $gs_font;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    &__tooltip {
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    &__checkbox {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.gs__tooltip {
+    width: 12px;
+    height: 12px;
+    margin-top: 0.5em;
+    
+    &:hover .gs__tooltip__container {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__container {
+        background-color: white;
+        box-shadow: 0px 42px 76px rgba(0, 0, 0, 0.05), 0px 27.2222px 44.5093px rgba(0, 0, 0, 0.037963), 0px 16.1778px 24.2074px rgba(0, 0, 0, 0.0303704), 0px 8.4px 12.35px rgba(0, 0, 0, 0.025), 0px 3.42222px 6.19259px rgba(0, 0, 0, 0.0196296), 0px 0.777778px 2.99074px rgba(0, 0, 0, 0.012037);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 16px;
+        width: 248px;
+        height: 162px;
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s, visibility 0.3s;
+
+        &:hover {
+            opacity: 0.8;
+            visibility: visible;
+        }
+    }
+
+    &__container:hover .gs__tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__text {
+        color: $gs_dark;
+        font-family: Cabin;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+
+        &__link {
+            color: $gs_green;
+            letter-spacing: -0.02em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}
+
+.gs__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & >*:last-child {
+        margin-right: 15px;
+    }
+}
+
+.gs__checkbox {
+    &__container {
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+
+        &__shadow {
+            width: 50px;
+            height: 50px;
+            background-color: $gs_light_green;
+            border-radius: 50%;
+            position: absolute;
+            right: -16px;
+            top: -16px;
+            z-index: -1;
+            opacity: 0;
+            transition: all 0.3s ease-in 0s;
+        }
+
+    }
+
+    &__styled:hover {
+        .gs__checkbox__container__shadow {
+            opacity: 1;
+        }
+    }
+    
+    &__styled {
+        display: inline-block;
+        position: relative;
+        width: 18px;
+        height: 18px;
+        border-radius: 3px;
+        border-style: solid;
+        border-color: black;
+        transition: all 150ms;
+        
+        &__svg {
+            background-color: $gs_green;
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: white;
+            stroke-width: 2px;
+        }
+    }
+}
+
+.gs__items__color {
+    &-picker {
+        display: flex;
+        flex-direction: row;
+    }
+    height: 16px;
+    width: 16px;
+
+    &:not(:last-child) {
+        margin-right: 4px;
+    }
+
+    &--selected {
+        border: 2px solid #B0B0B0;
+        box-sizing: border-box;
+        box-shadow: 0px 8.5px 8.5px rgba(0, 0, 0, 0.01);
+    }
+
+    &--blue {
+        background-color: $gs_blue;
+    }
+    &--blue:hover {
+        background-color: $gs_blue-hover;
+    }
+    &--green {
+        background-color: $gs_green;
+    }
+    &--green:hover {
+        background-color: $gs_green-hover;
+    }
+    &--bege {
+        background-color: $gs_bege;
+    }
+    &--bege:hover {
+        background-color: $gs_bege-hover;
+    }
+    &--white {
+        background-color: $gs_white;
+    }
+    &--white:hover {
+        background-color: $gs_white-hover;
+    }
+    &--dark {
+        background-color: $gs_dark;
+    }
+    &--dark:hover {
+        background-color: $gs_dark-hover;
+    }
+}
+
+.gs__toggle-switch {
+    position: relative;
+    width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+    text-align: left;
+
+    &__checkbox {
+        display: none;
+
+        &__label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 0 solid #bbb;
+            border-radius: 20px;
+            margin: 0;
+        }
+    }
+
+    &__inner {
+        display: block;
+        width: 200%;
+        margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
+        &:before,
+        &:after {
+            display: block;
+            float: left;
+            width: 50%;
+            height: 20px;
+            padding: 0;
+            line-height: 20px;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+        &:before {
+            content: "";
+            padding-left: 10px;
+            background-color: $gs_green;
+        }
+    }
+
+    &__inner:after {
+        content: "";
+        padding-right: 10px;
+        background-color: #bbb;
+        text-align: right;
+    }
+    
+    &__switch {
+        display: block;
+        width: 16px;
+        margin: 2px;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        border: 0 solid #bbb;
+        border-radius: 20px;
+        transition: all 0.3s ease-in 0s;
+    }
+
+    &__switch:hover {
+        box-shadow: 0 0 0 5px $gs_light_green; 
+    }
+    
+    &__checkbox__label__on {
+        .toggle-switch-inner {
+          margin-left: 0;
+        }
+        .toggle-switch-switch {
+          right: 0px;
+        }
+    }
+}

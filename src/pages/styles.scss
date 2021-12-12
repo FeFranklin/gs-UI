@@ -1,0 +1,22 @@
+
+// styles
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+$gs_font: 'Cabin';
+$background_color: #E5E5E5;
+
+.main__page {
+    color: #232129;
+    padding: 96;
+    font-family: $gs_font;
+    background-color: $background_color;
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: 64;
+        max-width: 320;
+    }
+
+    &__heading--accent {
+        color: #663399;
+    }
+}
