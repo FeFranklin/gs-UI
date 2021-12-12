@@ -17,12 +17,12 @@ const Checkbox = ({isChecked, onChange}) => {
                 tabIndex="0"
                 aria-checked={checked}
             >
-            <div className='gs__checkbox__container__shadow' />
-            {checked && (
-                <svg className='gs__checkbox__styled__svg' viewBox="0 0 24 24">
-                    <polyline points="20 6 9 17 4 12" />
-                </svg>
-            )}
+                <div className='gs__checkbox__container__shadow' />
+                {checked && (
+                    <svg className='gs__checkbox__styled__svg' viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                )}
             </div>
         </div>
     )

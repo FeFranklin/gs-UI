@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/gs-UI",
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Greenspark UI Task",
