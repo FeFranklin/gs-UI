@@ -14,12 +14,12 @@ const IndexPage = () => {
 
   return (
     <main className="main__page">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       <title>Home Page</title>
       <h1 className="main__page__heading">
-      Per product widgets
-        <br />
-      </h1>
-      <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly'}}>
+        Per product widgets
+        </h1>
+      <div className="widgets__container">
         {products?.length && products.map((product, index) => {
           return (<Widget typeVerb={typeVerb} product={product} id={product?.id} />)
         })}

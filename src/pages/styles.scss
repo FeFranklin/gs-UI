@@ -4,6 +4,14 @@
 $gs_font: 'Cabin';
 $background_color: #E5E5E5;
 
+html, body {
+    margin:0px;
+    min-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
 .main__page {
     color: #232129;
     padding: 96;
@@ -18,5 +26,18 @@ $background_color: #E5E5E5;
 
     &__heading--accent {
         color: #663399;
+    }
+}
+
+.widgets__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 1025px) {
+    .widgets__container {
+        flex-direction: column;
+        align-items: center;
     }
 }
