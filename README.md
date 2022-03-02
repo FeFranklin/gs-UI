@@ -17,16 +17,17 @@
     <br />
     <a href="https://fefranklin.github.io/gs-UI/">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/FeFranklin/gs-UI/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/FeFranklin/gs-UI/issues">Request Feature</a>
   </p>
 </div>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<div align="center">
+  <img src="https://imgur.com/iN8W7z3.jpeg" alt="Widget component demo">
+</div>
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
